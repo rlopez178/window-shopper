@@ -4,11 +4,18 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -46,30 +53,61 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypt-j1-OgM">
+                                <rect key="frame" x="20" y="300" width="335" height="51.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="46"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3j-7N-D7G">
+                                <rect key="frame" x="165" y="359" width="45.5" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO7-t5-JlQ">
+                                <rect key="frame" x="116" y="607" width="143" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOS-UN-gzC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PO7-t5-JlQ" secondAttribute="bottom" constant="20" id="2d8-sh-Dxa"/>
                             <constraint firstItem="6Vw-Jx-G4q" firstAttribute="leading" secondItem="tQk-sJ-doE" secondAttribute="leading" id="AGh-Sl-Y1f"/>
                             <constraint firstItem="6Vw-Jx-G4q" firstAttribute="trailing" secondItem="tQk-sJ-doE" secondAttribute="trailing" id="BX8-ki-aVo"/>
                             <constraint firstItem="Ohe-yc-ObE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="C7G-Wu-DYb"/>
+                            <constraint firstItem="PO7-t5-JlQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ET6-vT-aeN"/>
                             <constraint firstItem="6Vw-Jx-G4q" firstAttribute="height" secondItem="tQk-sJ-doE" secondAttribute="height" id="GRI-fa-VOT"/>
+                            <constraint firstItem="U3j-7N-D7G" firstAttribute="top" secondItem="ypt-j1-OgM" secondAttribute="bottom" constant="7.5" id="JuK-Fr-adC"/>
                             <constraint firstItem="6Vw-Jx-G4q" firstAttribute="top" secondItem="tQk-sJ-doE" secondAttribute="bottom" constant="25" id="PYZ-4z-PyE"/>
                             <constraint firstItem="Ohe-yc-ObE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qov-hK-PcS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Vw-Jx-G4q" secondAttribute="trailing" constant="20" id="RB1-nf-QVn"/>
                             <constraint firstItem="6Vw-Jx-G4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZpP-sn-Kho"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tQk-sJ-doE" secondAttribute="trailing" constant="20" id="f6V-zI-VXP"/>
                             <constraint firstItem="tQk-sJ-doE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f8L-Q8-l4e"/>
+                            <constraint firstItem="ypt-j1-OgM" firstAttribute="top" secondItem="6Vw-Jx-G4q" secondAttribute="bottom" constant="35" id="fMC-0s-qbZ"/>
                             <constraint firstItem="Ohe-yc-ObE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fvd-VP-Wpx"/>
+                            <constraint firstItem="ypt-j1-OgM" firstAttribute="width" secondItem="6Vw-Jx-G4q" secondAttribute="width" id="gpg-aC-bl1"/>
                             <constraint firstItem="tQk-sJ-doE" firstAttribute="top" secondItem="wDX-gD-gYV" secondAttribute="bottom" constant="45" id="jZF-E7-hvo"/>
                             <constraint firstItem="Ohe-yc-ObE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n3r-We-aMI"/>
                             <constraint firstItem="tQk-sJ-doE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="niU-vm-7JO"/>
                             <constraint firstItem="wDX-gD-gYV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="oIN-I9-0b0"/>
                             <constraint firstItem="wDX-gD-gYV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ynd-tC-tJB"/>
+                            <constraint firstItem="U3j-7N-D7G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ysd-gK-4t2"/>
+                            <constraint firstItem="ypt-j1-OgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z7p-T9-jBh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hourLabel" destination="U3j-7N-D7G" id="09G-K4-aLi"/>
                         <outlet property="priceTxt" destination="6Vw-Jx-G4q" id="owO-ZO-jZh"/>
+                        <outlet property="resultLabel" destination="ypt-j1-OgM" id="KuF-IE-ogN"/>
                         <outlet property="wageTxt" destination="tQk-sJ-doE" id="chs-wK-n5J"/>
                     </connections>
                 </viewController>
