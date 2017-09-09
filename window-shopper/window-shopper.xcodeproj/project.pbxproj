@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6673AF901F62457700FD1A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673AF8F1F62457700FD1A3D /* AppDelegate.swift */; };
-		6673AF921F62457700FD1A3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673AF911F62457700FD1A3D /* ViewController.swift */; };
+		6673AF921F62457700FD1A3D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673AF911F62457700FD1A3D /* MainVC.swift */; };
 		6673AF951F62457700FD1A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673AF931F62457700FD1A3D /* Main.storyboard */; };
 		6673AF971F62457700FD1A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6673AF961F62457700FD1A3D /* Assets.xcassets */; };
 		6673AF9A1F62457700FD1A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673AF981F62457700FD1A3D /* LaunchScreen.storyboard */; };
+		6673AFA61F62482C00FD1A3D /* CurrencyTxtFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673AFA51F62482C00FD1A3D /* CurrencyTxtFeild.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6673AF8C1F62457700FD1A3D /* window-shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "window-shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6673AF8F1F62457700FD1A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6673AF911F62457700FD1A3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6673AF911F62457700FD1A3D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6673AF941F62457700FD1A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6673AF961F62457700FD1A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6673AF991F62457700FD1A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6673AF9B1F62457700FD1A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6673AFA51F62482C00FD1A3D /* CurrencyTxtFeild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTxtFeild.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		6673AF8E1F62457700FD1A3D /* window-shopper */ = {
 			isa = PBXGroup;
 			children = (
+				6673AFA41F6247F500FD1A3D /* Views */,
+				6673AFA31F6246C900FD1A3D /* Controller */,
 				6673AF8F1F62457700FD1A3D /* AppDelegate.swift */,
-				6673AF911F62457700FD1A3D /* ViewController.swift */,
 				6673AF931F62457700FD1A3D /* Main.storyboard */,
 				6673AF961F62457700FD1A3D /* Assets.xcassets */,
 				6673AF981F62457700FD1A3D /* LaunchScreen.storyboard */,
 				6673AF9B1F62457700FD1A3D /* Info.plist */,
 			);
 			path = "window-shopper";
+			sourceTree = "<group>";
+		};
+		6673AFA31F6246C900FD1A3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6673AF911F62457700FD1A3D /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6673AFA41F6247F500FD1A3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6673AFA51F62482C00FD1A3D /* CurrencyTxtFeild.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6673AF921F62457700FD1A3D /* ViewController.swift in Sources */,
+				6673AF921F62457700FD1A3D /* MainVC.swift in Sources */,
 				6673AF901F62457700FD1A3D /* AppDelegate.swift in Sources */,
+				6673AFA61F62482C00FD1A3D /* CurrencyTxtFeild.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9XV45LJ5Z;
 				INFOPLIST_FILE = "window-shopper/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.OceanBiscuit.window-shopper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,7 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9XV45LJ5Z;
 				INFOPLIST_FILE = "window-shopper/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.OceanBiscuit.window-shopper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
